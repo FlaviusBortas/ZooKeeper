@@ -18,6 +18,11 @@ class Animal {
         self.species = species
         self.gender = gender
     }
-    
-    
+}
+
+extension Animal {
+    static var allAnimals: [Animal] = [Animal(name: "Tony", species: "Penguin", gender: "Male"),
+                                       Animal(name: "Tina" , species: "Penguin" , gender: "Female"),
+                                       Animal(name: "Jack", species: "Jaguar", gender: "Male"),
+                                       Animal(name: "Jenny", species: "Jaguar", gender: "Female")]
 }

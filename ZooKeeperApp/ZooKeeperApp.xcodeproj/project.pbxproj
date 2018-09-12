@@ -15,6 +15,7 @@
 		8BFDDDD0214980A000409E59 /* ZooKeeperAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDCF214980A000409E59 /* ZooKeeperAppUITests.swift */; };
 		8BFDDDDE2149818200409E59 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDDD2149818200409E59 /* MainTableViewController.swift */; };
 		8BFDDDE02149852B00409E59 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDDF2149852B00409E59 /* Animal.swift */; };
+		8BFDDDE2214990B700409E59 /* Habitats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDE1214990B700409E59 /* Habitats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8BFDDDD1214980A000409E59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BFDDDDD2149818200409E59 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		8BFDDDDF2149852B00409E59 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		8BFDDDE1214990B700409E59 /* Habitats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habitats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				8BFDDDDD2149818200409E59 /* MainTableViewController.swift */,
 				8BFDDDDF2149852B00409E59 /* Animal.swift */,
+				8BFDDDE1214990B700409E59 /* Habitats.swift */,
 				8BFDDDAE2149809E00409E59 /* ZooKeeperApp */,
 				8BFDDDC3214980A000409E59 /* ZooKeeperAppTests */,
 				8BFDDDCE214980A000409E59 /* ZooKeeperAppUITests */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFDDDDE2149818200409E59 /* MainTableViewController.swift in Sources */,
+				8BFDDDE2214990B700409E59 /* Habitats.swift in Sources */,
 				8BFDDDB02149809F00409E59 /* AppDelegate.swift in Sources */,
 				8BFDDDE02149852B00409E59 /* Animal.swift in Sources */,
 			);
