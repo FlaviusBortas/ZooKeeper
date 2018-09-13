@@ -1,0 +1,80 @@
+//
+//  MainTableViewController.swift
+//  ZooKeeperApp
+//
+//  Created by Flavius Bortas on 9/12/18.
+//  Copyright © 2018 Flavius Bortas. All rights reserved.
+//
+
+import UIKit
+
+class HabitatsTableViewController: UITableViewController {
+    
+    //MARK: - Properties
+    
+    var allHabitats = Habitat.allHabitats
+    var selectedHabitat: Habitat?
+    
+    //MARK: - View Lifecycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+
+    
+    //MARK: - Methods
+
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return allHabitats.count
+    }
+
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.habitat.rawValue, for: indexPath)
+        cell.textLabel?.text = "\(allHabitats[indexPath.row].climate)".capitalized
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedHabitat = allHabitats[indexPath.row]
+        
+        performSegue(withIdentifier: SegueTo.pens.rawValue, sender: indexPath.row)
+    }
+ 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let segueID = segue.identifier
+        
+        switch segueID {
+        case SegueTo.pens.rawValue:
+            guard let showPens = segue.destination as? PensTableViewController else {return}
+            showPens.pens = selectedHabitat?.pen
+        default:
+            return
+        }
+    }
+
+
+    /*
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
+    }
+    */
+
+}

@@ -13,9 +13,16 @@
 		8BFDDDBA214980A000409E59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BFDDDB8214980A000409E59 /* LaunchScreen.storyboard */; };
 		8BFDDDC5214980A000409E59 /* ZooKeeperAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDC4214980A000409E59 /* ZooKeeperAppTests.swift */; };
 		8BFDDDD0214980A000409E59 /* ZooKeeperAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDCF214980A000409E59 /* ZooKeeperAppUITests.swift */; };
-		8BFDDDDE2149818200409E59 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDDD2149818200409E59 /* MainTableViewController.swift */; };
+		8BFDDDDE2149818200409E59 /* HabitatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDDD2149818200409E59 /* HabitatsTableViewController.swift */; };
 		8BFDDDE02149852B00409E59 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDDF2149852B00409E59 /* Animal.swift */; };
 		8BFDDDE2214990B700409E59 /* Habitats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDE1214990B700409E59 /* Habitats.swift */; };
+		8BFDDDE42149A7FB00409E59 /* BabyAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDE32149A7FB00409E59 /* BabyAnimal.swift */; };
+		8BFDDDE62149AAFB00409E59 /* Pen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDE52149AAFB00409E59 /* Pen.swift */; };
+		8BFDDDE8214A8B0C00409E59 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDE7214A8B0C00409E59 /* CellIdentifiers.swift */; };
+		8BFDDDEA214A9D2700409E59 /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDE9214A9D2700409E59 /* SegueIdentifiers.swift */; };
+		8BFDDDEC214A9F9300409E59 /* AnimalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDEB214A9F9300409E59 /* AnimalsTableViewController.swift */; };
+		8BFDDDEE214A9FB100409E59 /* AnimalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDED214A9FB100409E59 /* AnimalDetailsViewController.swift */; };
+		8BFDDDF0214AA06D00409E59 /* PensTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDEF214AA06D00409E59 /* PensTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +55,16 @@
 		8BFDDDCB214980A000409E59 /* ZooKeeperAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZooKeeperAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFDDDCF214980A000409E59 /* ZooKeeperAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooKeeperAppUITests.swift; sourceTree = "<group>"; };
 		8BFDDDD1214980A000409E59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BFDDDDD2149818200409E59 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		8BFDDDDD2149818200409E59 /* HabitatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitatsTableViewController.swift; sourceTree = "<group>"; };
 		8BFDDDDF2149852B00409E59 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		8BFDDDE1214990B700409E59 /* Habitats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habitats.swift; sourceTree = "<group>"; };
+		8BFDDDE32149A7FB00409E59 /* BabyAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyAnimal.swift; sourceTree = "<group>"; };
+		8BFDDDE52149AAFB00409E59 /* Pen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pen.swift; sourceTree = "<group>"; };
+		8BFDDDE7214A8B0C00409E59 /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
+		8BFDDDE9214A9D2700409E59 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
+		8BFDDDEB214A9F9300409E59 /* AnimalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsTableViewController.swift; sourceTree = "<group>"; };
+		8BFDDDED214A9FB100409E59 /* AnimalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsViewController.swift; sourceTree = "<group>"; };
+		8BFDDDEF214AA06D00409E59 /* PensTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PensTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +95,16 @@
 		8BFDDDA32149809E00409E59 = {
 			isa = PBXGroup;
 			children = (
-				8BFDDDDD2149818200409E59 /* MainTableViewController.swift */,
+				8BFDDDDD2149818200409E59 /* HabitatsTableViewController.swift */,
+				8BFDDDEF214AA06D00409E59 /* PensTableViewController.swift */,
+				8BFDDDEB214A9F9300409E59 /* AnimalsTableViewController.swift */,
+				8BFDDDED214A9FB100409E59 /* AnimalDetailsViewController.swift */,
 				8BFDDDDF2149852B00409E59 /* Animal.swift */,
 				8BFDDDE1214990B700409E59 /* Habitats.swift */,
+				8BFDDDE52149AAFB00409E59 /* Pen.swift */,
+				8BFDDDE32149A7FB00409E59 /* BabyAnimal.swift */,
+				8BFDDDE7214A8B0C00409E59 /* CellIdentifiers.swift */,
+				8BFDDDE9214A9D2700409E59 /* SegueIdentifiers.swift */,
 				8BFDDDAE2149809E00409E59 /* ZooKeeperApp */,
 				8BFDDDC3214980A000409E59 /* ZooKeeperAppTests */,
 				8BFDDDCE214980A000409E59 /* ZooKeeperAppUITests */,
@@ -262,10 +283,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BFDDDDE2149818200409E59 /* MainTableViewController.swift in Sources */,
+				8BFDDDEA214A9D2700409E59 /* SegueIdentifiers.swift in Sources */,
+				8BFDDDE42149A7FB00409E59 /* BabyAnimal.swift in Sources */,
+				8BFDDDEC214A9F9300409E59 /* AnimalsTableViewController.swift in Sources */,
+				8BFDDDF0214AA06D00409E59 /* PensTableViewController.swift in Sources */,
+				8BFDDDDE2149818200409E59 /* HabitatsTableViewController.swift in Sources */,
 				8BFDDDE2214990B700409E59 /* Habitats.swift in Sources */,
+				8BFDDDE62149AAFB00409E59 /* Pen.swift in Sources */,
 				8BFDDDB02149809F00409E59 /* AppDelegate.swift in Sources */,
+				8BFDDDE8214A8B0C00409E59 /* CellIdentifiers.swift in Sources */,
 				8BFDDDE02149852B00409E59 /* Animal.swift in Sources */,
+				8BFDDDEE214A9FB100409E59 /* AnimalDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
