@@ -12,4 +12,6 @@ enum Cell: String {
     case habitat = "HabitatCell"
     case pen = "PenCell"
     case animal = "AnimalCell"
+    case newAdult = "NewAdultCell"
+    case newBaby = "NewBabyCell"
 }
