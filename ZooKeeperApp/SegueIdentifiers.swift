@@ -12,4 +12,6 @@ enum SegueTo: String {
     case pens = "Pens"
     case animal = "Animals"
     case animalDetails = "AnimalDetails"
+    case addAnimal = "AddAnimal"
+    case newAnimalDetails = "NewAnimalDetails"
 }
