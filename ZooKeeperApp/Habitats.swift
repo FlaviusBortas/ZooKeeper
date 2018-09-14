@@ -19,16 +19,16 @@ enum Climate: String {
 
 class Habitat {
     var climate: Climate
-    var pen: Pen
+    var pens: [Pen]
     
-    init(climate: Climate, pen: Pen) {
+    init(climate: Climate, pens: [Pen]) {
         self.climate = climate
-        self.pen = pen
+        self.pens = pens
     }
 }
 
 extension Habitat {
-    static let allHabitats: [Habitat] = [Habitat(climate: .artic, pen: Pen(animals: [Animal.allAnimals2[0], Animal.allAnimals2[1]])),
-                                         Habitat(climate: .desert, pen: Pen(animals: [Animal.allAnimals2[2], Animal.allAnimals2[3]])),
-                                         Habitat(climate: .forrest, pen: Pen(animals: [Animal.allAnimals2[4], Animal.allAnimals2[5]]))]
+    static let allHabitats: [Habitat] = [Habitat(climate: .artic, pens: [Pen(species: "Penguin", animals: Animal.allAnimals.filter { $0.species == "Penguin" } )]),
+                                         Habitat(climate: .desert, pens: [Pen(species: "Camel", animals: Animal.allAnimals.filter { $0.species == "Camel" } )]),
+                                         Habitat(climate: .forrest, pens: [Pen(species: "Jaguar", animals: Animal.allAnimals.filter { $0.species == "Jaguar" } )])]
 }

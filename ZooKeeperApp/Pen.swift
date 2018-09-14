@@ -9,12 +9,12 @@
 import Foundation
 
 class Pen {
+    let species: String
     var animals: [Animal]
     
-    init(animals: [Animal]) {
+    init(species: String, animals: [Animal]) {
+        self.species = species
         self.animals = animals
     }
-    
-    
 }
 

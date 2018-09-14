@@ -10,6 +10,6 @@ import Foundation
 
 enum SegueTo: String {
     case pens = "Pens"
-    case animal = "Animal"
+    case animal = "Animals"
     case animalDetails = "AnimalDetails"
 }

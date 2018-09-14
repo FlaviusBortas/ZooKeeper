@@ -16,22 +16,12 @@ class HabitatsTableViewController: UITableViewController {
     var selectedHabitat: Habitat?
     
     //MARK: - View Lifecycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
-
     
     //MARK: - Methods
-
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allHabitats.count
@@ -53,12 +43,20 @@ class HabitatsTableViewController: UITableViewController {
  
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedHabitat = selectedHabitat else {
+            print("No Habitat is Selected")
+            return
+        }
+        
         let segueID = segue.identifier
         
         switch segueID {
         case SegueTo.pens.rawValue:
-            guard let showPens = segue.destination as? PensTableViewController else {return}
-            showPens.pens = selectedHabitat?.pen
+            guard let pensTVC = segue.destination as? PensTableViewController else {
+                print("Failed to Cast Destination VC As PensTVC")
+                return
+            }
+            pensTVC.pens = selectedHabitat.pens
         default:
             return
         }

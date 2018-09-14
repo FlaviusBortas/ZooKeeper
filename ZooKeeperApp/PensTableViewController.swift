@@ -11,45 +11,56 @@ import UIKit
 class PensTableViewController: UITableViewController {
     
     //MARK: - Porperties
-    var allPens = Habitat.allHabitats
-    var pens: Pen?
+    //    var allPens = Habitat.allHabitats
+    var pens = [Pen]()
+    var selectedPen: Pen?
     
-
     //MARK: - View Lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
-
     
     //MARK: - Methods
-
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard  let pens = pens?.animals.count else { return 0 }
-        
-        return pens - 1
+        return pens.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let penSpecies = pens[indexPath.row].species
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.pen.rawValue, for: indexPath)
-        
-        guard let animalSpecies = pens?.animals[indexPath.row].species else { return cell }
-        
-            cell.textLabel?.text = "\(animalSpecies) Pen"
+        cell.textLabel?.text = "\(penSpecies) Pen"
         
         return cell
-
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedPen = pens[indexPath.row]
+        
+        performSegue(withIdentifier: SegueTo.animal.rawValue , sender: indexPath)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedPen = selectedPen else {
+            print("No Pen Selected")
+            return
+        }
+        
+        
+        let segueId = segue.identifier
+        
+        switch segueId {
+        case SegueTo.animal.rawValue:
+            guard let animalsTVC = segue.destination as? AnimalsTableViewController else {return}
+            animalsTVC.animals = selectedPen.animals
+        default:
+            return
+        }
+    }
+    
+    
+    
 }
