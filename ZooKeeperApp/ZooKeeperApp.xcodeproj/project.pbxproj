@@ -96,7 +96,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8BFDDDA32149809E00409E59 = {
+		8BA1E7CF214C21EF00DF23B0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				8BFDDDDD2149818200409E59 /* HabitatsTableViewController.swift */,
@@ -105,12 +105,36 @@
 				8BFDDDED214A9FB100409E59 /* AnimalDetailsViewController.swift */,
 				8BA1E7CA214BF99200DF23B0 /* AddAnimalTableViewController.swift */,
 				8BA1E7CC214BFAD600DF23B0 /* NewAnimalDetailsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8BA1E7D0214C223000DF23B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				8BFDDDDF2149852B00409E59 /* Animal.swift */,
 				8BFDDDE1214990B700409E59 /* Habitats.swift */,
 				8BFDDDE52149AAFB00409E59 /* Pen.swift */,
 				8BFDDDE32149A7FB00409E59 /* BabyAnimal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8BA1E7D1214C225200DF23B0 /* Identifiers */ = {
+			isa = PBXGroup;
+			children = (
 				8BFDDDE7214A8B0C00409E59 /* CellIdentifiers.swift */,
 				8BFDDDE9214A9D2700409E59 /* SegueIdentifiers.swift */,
+			);
+			path = Identifiers;
+			sourceTree = "<group>";
+		};
+		8BFDDDA32149809E00409E59 = {
+			isa = PBXGroup;
+			children = (
+				8BA1E7CF214C21EF00DF23B0 /* ViewControllers */,
+				8BA1E7D0214C223000DF23B0 /* Models */,
+				8BA1E7D1214C225200DF23B0 /* Identifiers */,
 				8BFDDDAE2149809E00409E59 /* ZooKeeperApp */,
 				8BFDDDC3214980A000409E59 /* ZooKeeperAppTests */,
 				8BFDDDCE214980A000409E59 /* ZooKeeperAppUITests */,
