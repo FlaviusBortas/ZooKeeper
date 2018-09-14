@@ -21,6 +21,12 @@ class AnimalsTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    //MARK: - Actions
+    
+    @IBAction func addTapped(_ sender: UIBarButtonItem) {
+    }
+    
+    
     //MARK: - Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,6 +47,13 @@ class AnimalsTableViewController: UITableViewController {
         
         
         performSegue(withIdentifier: SegueTo.animalDetails.rawValue, sender: indexPath)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
