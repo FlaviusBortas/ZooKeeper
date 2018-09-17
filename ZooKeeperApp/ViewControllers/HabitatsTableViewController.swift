@@ -12,13 +12,22 @@ class HabitatsTableViewController: UITableViewController {
     
     //MARK: - Properties
     
-    var allHabitats = Habitat.allHabitats
+    var allHabitats: [Habitat] {
+        return Habitat.allHabitats
+    }
+    
     var selectedHabitat: Habitat?
     
     //MARK: - View Lifecycle
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        useLargeTitles()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        useLargeTitles()
     }
     
     //MARK: - Methods
@@ -60,5 +69,10 @@ class HabitatsTableViewController: UITableViewController {
         default:
             return
         }
+    }
+    
+    
+    func useLargeTitles() {
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

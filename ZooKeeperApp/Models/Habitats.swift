@@ -28,7 +28,11 @@ class Habitat {
 }
 
 extension Habitat {
-    static let allHabitats: [Habitat] = [Habitat(climate: .artic, pens: [Pen(species: "Penguin", animals: Animal.allAnimals.filter { $0.species == "Penguin" } )]),
-                                         Habitat(climate: .desert, pens: [Pen(species: "Camel", animals: Animal.allAnimals.filter { $0.species == "Camel" } )]),
-                                         Habitat(climate: .forrest, pens: [Pen(species: "Jaguar", animals: Animal.allAnimals.filter { $0.species == "Jaguar" } )])]
+    static var allHabitats: [Habitat] {
+        return [Habitat(climate: .artic, pens: [Pen(species: "Penguin")]),
+                Habitat(climate: .desert, pens: [Pen(species: "Camel")]),
+                Habitat(climate: .forrest, pens: [Pen(species: "Jaguar")])]
+    }
 }
+
+private let database = AnimalDatabase.shared

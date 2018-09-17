@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EditAnimalDelegate {
+    func updateAnimal(_ updatedAnimal: Animal)
+}
+
 class AnimalDetailsViewController: UIViewController {
     
     //MARK: - UI Elements
@@ -20,18 +24,56 @@ class AnimalDetailsViewController: UIViewController {
     
     //MARK: - Properties
     
+    var delegate: EditAnimalDelegate?
     var animal: Animal?
     
-    //MAEK: - View Lifecycle
+    //MARK: - View Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         loadAnimalDetails()
+        useLargeTitles()
     }
     
     //MARK: - Actions
     
     @IBAction func editTapped(_ sender: UIBarButtonItem) {
+        guard var animal = animal else {
+            print("No animal found.")
+            return
+        }
+        
+        if sender.title == "Edit" {
+            sender.title = "Done"
+            
+            enableTextFields()
+            
+            if animalAge.text == "Adult" {
+                animalAge.isEnabled = false
+            }
+            
+            animalName.becomeFirstResponder()
+        } else {
+            sender.title = "Edit"
+            
+            animal.name = animalName.text ?? ""
+            animal.species = animalSpecies.text ?? ""
+            
+            if let gender = Gender(rawValue: animalGender.text ?? "") {
+                animal.gender = gender
+            }
+            
+            if let babyAnimal = animal as? BabyAnimal {
+                babyAnimal.age = animalAge.text ?? ""
+                animal = babyAnimal
+            }
+            
+            disableTextFields()
+            
+            delegate?.updateAnimal(animal)
+            
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
@@ -52,10 +94,28 @@ class AnimalDetailsViewController: UIViewController {
         animalGender.text = animal.gender.rawValue
         
         guard let babyAge = (animal as? BabyAnimal)?.age else {
-            animalAge.text = "Adult \(animal.species)"
+            animalAge.text = "Adult"
             return
         }
         animalAge.text = babyAge
-        
+    }
+    
+    
+    func enableTextFields() {
+        animalName.isEnabled = true
+        animalSpecies.isEnabled = true
+        animalGender.isEnabled = true
+        animalAge.isEnabled = true
+    }
+    
+    func disableTextFields() {
+        animalName.isEnabled = false
+        animalSpecies.isEnabled = false
+        animalGender.isEnabled = false
+        animalAge.isEnabled = false
+    }
+    
+    func useLargeTitles() {
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

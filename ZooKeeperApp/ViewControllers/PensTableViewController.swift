@@ -11,14 +11,19 @@ import UIKit
 class PensTableViewController: UITableViewController {
     
     //MARK: - Porperties
-    //    var allPens = Habitat.allHabitats
     var pens = [Pen]()
     var selectedPen: Pen?
     
     //MARK: - View Lifecycle
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        useLargeTitles()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+        useLargeTitles()
     }
     
     //MARK: - Methods
@@ -61,6 +66,10 @@ class PensTableViewController: UITableViewController {
         }
     }
     
+    
+    func useLargeTitles() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
     
     
 }

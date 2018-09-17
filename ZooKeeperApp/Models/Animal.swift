@@ -8,12 +8,23 @@
 
 import Foundation
 
-enum Gender: String {
+enum Gender: String, Codable {
     case male = "Male"
     case female = "Female"
+    
+    init?(rawValue: String) {
+        switch rawValue.lowercased() {
+        case "male", "m":
+            self = .male
+        case "female", "f":
+            self = .female
+        default:
+            return nil
+        }
+    }
 }
 
-class Animal {
+class Animal: Codable {
     var name: String
     var species: String
     var gender: Gender
@@ -26,23 +37,7 @@ class Animal {
 }
 
 extension Animal {
-    
-    static var allAnimals: [Animal] = {
-        // If I can load data from the plist return that data
-        
-        // else return defaultAnimals
-        
-        if false {
-            return []
-        } else {
-            return defaultAnimals
-        }
-        
-    }()
-    
-//    static var alllAnimals: [Animal] = loadAllAnimals()
-    
-    // Once app is finished put all of the defaults into the plist
+
     static var defaultAnimals: [Animal] = [Animal(name: "Tony", species: "Penguin", gender: .male),
                                        Animal(name: "Tina" , species: "Penguin" , gender: .female),
                                        BabyAnimal(name: "Timmy", species: "Penguin", gender: .male, age: "1"),
@@ -52,13 +47,5 @@ extension Animal {
                                        Animal(name: "George", species: "Jaguar", gender: .male),
                                        Animal(name: "Gene", species: "Jaguar", gender: .female),
                                        BabyAnimal(name: "Jimmy", species: "Jaguar", gender: .male, age: "1")]
-
 }
 
-//func loadAllAnimals() -> [Animal] {
-//    if false {
-//        return []
-//    } else {
-//        return Animal.defaultAnimals
-//    }
-//}

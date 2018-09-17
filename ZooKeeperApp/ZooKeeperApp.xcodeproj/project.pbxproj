@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8BA1E7CB214BF99200DF23B0 /* AddAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1E7CA214BF99200DF23B0 /* AddAnimalTableViewController.swift */; };
-		8BA1E7CD214BFAD600DF23B0 /* NewAnimalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1E7CC214BFAD600DF23B0 /* NewAnimalDetailsViewController.swift */; };
+		8BA1E7CD214BFAD600DF23B0 /* AddAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1E7CC214BFAD600DF23B0 /* AddAnimalViewController.swift */; };
+		8BB59F13214DA71500391C3D /* AnimalDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB59F12214DA71500391C3D /* AnimalDatabase.swift */; };
 		8BFDDDB02149809F00409E59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFDDDAF2149809F00409E59 /* AppDelegate.swift */; };
 		8BFDDDB52149809F00409E59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BFDDDB32149809F00409E59 /* Main.storyboard */; };
 		8BFDDDB7214980A000409E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BFDDDB6214980A000409E59 /* Assets.xcassets */; };
@@ -45,8 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8BA1E7CA214BF99200DF23B0 /* AddAnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnimalTableViewController.swift; sourceTree = "<group>"; };
-		8BA1E7CC214BFAD600DF23B0 /* NewAnimalDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAnimalDetailsViewController.swift; sourceTree = "<group>"; };
+		8BA1E7CC214BFAD600DF23B0 /* AddAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnimalViewController.swift; sourceTree = "<group>"; };
+		8BB59F12214DA71500391C3D /* AnimalDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDatabase.swift; sourceTree = "<group>"; };
 		8BFDDDAC2149809E00409E59 /* ZooKeeperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooKeeperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BFDDDAF2149809F00409E59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BFDDDB42149809F00409E59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,8 +103,7 @@
 				8BFDDDEF214AA06D00409E59 /* PensTableViewController.swift */,
 				8BFDDDEB214A9F9300409E59 /* AnimalsTableViewController.swift */,
 				8BFDDDED214A9FB100409E59 /* AnimalDetailsViewController.swift */,
-				8BA1E7CA214BF99200DF23B0 /* AddAnimalTableViewController.swift */,
-				8BA1E7CC214BFAD600DF23B0 /* NewAnimalDetailsViewController.swift */,
+				8BA1E7CC214BFAD600DF23B0 /* AddAnimalViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -113,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				8BFDDDDF2149852B00409E59 /* Animal.swift */,
+				8BB59F12214DA71500391C3D /* AnimalDatabase.swift */,
 				8BFDDDE1214990B700409E59 /* Habitats.swift */,
 				8BFDDDE52149AAFB00409E59 /* Pen.swift */,
 				8BFDDDE32149A7FB00409E59 /* BabyAnimal.swift */,
@@ -317,15 +317,15 @@
 				8BFDDDE42149A7FB00409E59 /* BabyAnimal.swift in Sources */,
 				8BFDDDEC214A9F9300409E59 /* AnimalsTableViewController.swift in Sources */,
 				8BFDDDF0214AA06D00409E59 /* PensTableViewController.swift in Sources */,
-				8BA1E7CD214BFAD600DF23B0 /* NewAnimalDetailsViewController.swift in Sources */,
+				8BA1E7CD214BFAD600DF23B0 /* AddAnimalViewController.swift in Sources */,
 				8BFDDDDE2149818200409E59 /* HabitatsTableViewController.swift in Sources */,
 				8BFDDDE2214990B700409E59 /* Habitats.swift in Sources */,
 				8BFDDDE62149AAFB00409E59 /* Pen.swift in Sources */,
+				8BB59F13214DA71500391C3D /* AnimalDatabase.swift in Sources */,
 				8BFDDDB02149809F00409E59 /* AppDelegate.swift in Sources */,
 				8BFDDDE8214A8B0C00409E59 /* CellIdentifiers.swift in Sources */,
 				8BFDDDE02149852B00409E59 /* Animal.swift in Sources */,
 				8BFDDDEE214A9FB100409E59 /* AnimalDetailsViewController.swift in Sources */,
-				8BA1E7CB214BF99200DF23B0 /* AddAnimalTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

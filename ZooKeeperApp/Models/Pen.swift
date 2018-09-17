@@ -10,11 +10,12 @@ import Foundation
 
 class Pen {
     let species: String
-    var animals: [Animal]
+    var animals: [Animal] {
+        return AnimalDatabase.shared.animals.filter { $0.species == species }
+    }
     
-    init(species: String, animals: [Animal]) {
+    init(species: String) {
         self.species = species
-        self.animals = animals
     }
 }
 
